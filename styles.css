@@ -1,0 +1,89 @@
+.light-dark-mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projectHeader {
+  padding-top: 50px;
+}
+.light-dark-mode[data-theme="light"] {
+  background-color: white;
+  color: black;
+}
+
+.light-dark-mode[data-theme="dark"] {
+  background-color: black;
+  color: white;
+}
+
+/* Container for the switch and labels */
+.theme-switch-container {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the theme switch */
+.theme-switch {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #ddd;
+  position: relative;
+  width: 70px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+/* Styles for the switch icon */
+.switch-icon {
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  transition: left 0.3s ease;
+}
+
+.switch-icon.light {
+  left: 5px;
+  background-color: rgb(233, 182, 30);
+}
+
+.switch-icon.dark {
+  left: 40px;
+  background-color: rgb(54, 54, 54);
+}
+
+/* Styles for light and dark text */
+.toggler--light,
+.toggler--dark {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggler--light:hover,
+.toggler--dark:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.toggler--light.active {
+  background-color: rgb(222, 222, 222);
+  color: black;
+  font-weight: bold;
+}
+
+.toggler--dark.active {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
